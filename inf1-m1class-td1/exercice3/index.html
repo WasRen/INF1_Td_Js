@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exo1</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <h1 class="sign">Ajouter une Personne</h1>
+
+    <form action="" method="get" class="formPersonne" id="formulaire" onsubmit="return false;">
+
+        <div class="form">
+          <label for="name">Nom et Prénom : </label>
+          <input type="text" name="name" id="name" >
+        </div>
+
+        <div class="form">
+            <label for="gender">Genre&nbsp;:</label>
+            <select id="gender">
+              <option value="M">Homme</option>
+              <option value="F">Femme</option>
+            </select>
+          </div>
+
+          <div class="form">
+            <label for="age">Age : </label>
+            <input type="text" name="age" id="age" minlength="1" maxlength="3">
+          </div>
+
+        <div class="form">
+            <label for="nationnalité">Nationnalité : </label>
+            <input type="text" name="nationnalité" id="nationnalité" >
+        </div>
+        
+      </br></br></br>
+      <div>
+        <input type="submit" value="Ajouter" onclick="AjouterPersonne()">
+        <input type="reset" value="Effacer" onclick="resetAll()">
+      </div>
+      </form>
+
+
+      <div class="formPersonne">
+          <h2 class="sign">Personnes ajoutées</h2>
+          <script>generateAll()</script>
+          <p><span id="totalPers"></span></p>
+      </div>
+  
+  <script src="script.js"></script>
+    </body>
+</html>
